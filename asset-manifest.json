@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/johny-nakhleh/static/css/main.073c9b0a.css",
-    "main.js": "/johny-nakhleh/static/js/main.a88765e1.js",
+    "main.css": "/johny-nakhleh/static/css/main.372ea2b8.css",
+    "main.js": "/johny-nakhleh/static/js/main.3489758a.js",
     "static/js/787.08723609.chunk.js": "/johny-nakhleh/static/js/787.08723609.chunk.js",
+    "static/media/covik_bold.ttf": "/johny-nakhleh/static/media/covik_bold.755d5360a8ae0ac42418.ttf",
     "index.html": "/johny-nakhleh/index.html",
-    "main.073c9b0a.css.map": "/johny-nakhleh/static/css/main.073c9b0a.css.map",
-    "main.a88765e1.js.map": "/johny-nakhleh/static/js/main.a88765e1.js.map",
+    "main.372ea2b8.css.map": "/johny-nakhleh/static/css/main.372ea2b8.css.map",
+    "main.3489758a.js.map": "/johny-nakhleh/static/js/main.3489758a.js.map",
     "787.08723609.chunk.js.map": "/johny-nakhleh/static/js/787.08723609.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.a88765e1.js"
+    "static/css/main.372ea2b8.css",
+    "static/js/main.3489758a.js"
   ]
 }
