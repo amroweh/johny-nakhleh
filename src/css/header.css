@@ -1,0 +1,65 @@
+:root{
+  --primary-colour: darkblue;
+  --secondary-colour: rgb(189, 189, 208);
+}
+
+.headerNav{
+  background-color: var(--primary-colour);
+  color: var(--secondary-colour);
+  display: grid;
+  grid-template-areas: "navlinks navburger";
+}
+
+.headerUl{
+  grid-area: navlinks;
+  margin: 0;
+  padding: 0;
+}
+
+.headerLi{  
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+.headerLi:hover{  
+  background-color: var(--secondary-colour);
+  color: var(--primary-colour);
+  cursor: pointer;
+}
+
+.headerLi a{
+  all: unset;
+  font-size: 20px;
+}
+
+.headerIcon{
+  display: none;
+  text-align: right;
+}
+
+.headerIcon:hover{
+  cursor: pointer;
+}
+
+.headerIcon img{
+  width: 30px;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerNav{
+    grid-template-areas: "navburger"
+    "navlinks"
+  }
+  .headerLi{  
+    display: block;
+  }
+  .headerIcon{
+    display: inline-block;
+    padding: 15px;
+  }
+  .headerUl.closed{
+    display: none;
+  }
+}
