@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const StyledHamburgerBar = styled.div`
-  width: ${({ topHeight }) => topHeight*0.9}px;
+  width: ${({ topHeight }) => topHeight * 0.9}px;
   height: ${({ topHeight }) => topHeight / 7}px;
-  background-color: ${({ barColour }) => barColour || "#333"};
+  background-color: ${({ StyledHamburgerBarColour_closed }) =>
+    StyledHamburgerBarColour_closed || "black"};
   border-radius: 2px;
   margin: ${({ topHeight }) => topHeight / 7}px 0;
   transition: 0.4s;
@@ -11,13 +12,19 @@ export const StyledHamburgerBar = styled.div`
   &.change1 {
     transform: translate(0, ${({ topHeight }) => topHeight / 3.5}px)
       rotate(-45deg);
+    background-color: ${({ StyledHamburgerBarColour_open }) =>
+      StyledHamburgerBarColour_open || "white"};
   }
   &.change2 {
     opacity: 0;
+    background-color: ${({ StyledHamburgerBarColour_open }) =>
+      StyledHamburgerBarColour_open || "white"};
   }
   &.change3 {
     transform: translate(0, -${({ topHeight }) => topHeight / 3.5}px)
       rotate(45deg);
+    background-color: ${({ StyledHamburgerBarColour_open }) =>
+      StyledHamburgerBarColour_open || "white"};
   }
 `;
 
@@ -56,7 +63,8 @@ export const StyledNavMenuContentSection_li = styled.li`
 export const StyledNavMenuContentSection = styled.ul`
   display: block;
   position: absolute;
-  background-color: white;
+  background-color: ${({ headerNavColour }) => headerNavColour || "black"};
+  color: ${({ headerNavTextColour }) => headerNavTextColour || "white"};
   text-align: center;
   margin: 0;
   padding: ${({ topHeight }) => topHeight}px 0 0 0;
@@ -76,6 +84,7 @@ export const StyledNavMenuContentSection = styled.ul`
 export const StyledNavMenu = styled.nav`
   margin: 0;
   padding: 0;
-  position: relative;
   line-height: 0;
+  position: fixed;
+  width: 100%;
 `;
