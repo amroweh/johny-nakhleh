@@ -1,12 +1,10 @@
-import Header2 from "./components/Header2";
 import "./css/globals.css";
-// import Header from "./components/Header";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      {/* <Header /> */}
-      <Header2 />
+      <Header />
       <div style={{ textAlign: "center" }}>
         <h1>Hello from Johny's new Site!</h1>
         <h3>Johny is a great personal trainer!</h3>

@@ -1,65 +1,46 @@
 :root{
-  --primary-colour: darkblue;
-  --secondary-colour: rgb(189, 189, 208);
+    --hamburgerButtonHeight: 49px
 }
 
-.headerNav{
-  background-color: var(--primary-colour);
-  color: var(--secondary-colour);
-  display: grid;
-  grid-template-areas: "navlinks navburger";
-}
-
-.headerUl{
-  grid-area: navlinks;
+.headerNav {
   margin: 0;
   padding: 0;
+  position: relative;
+  line-height: 0;
 }
 
-.headerLi{  
+.headerUl {
+  display: block;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  margin: 0;
+  padding: var(--hamburgerButtonHeight) 0 0 0;
+  width: 100%;
+  left: 0%;
+  top: 0;
+  height: calc(100vh - var(--hamburgerButtonHeight));
+  opacity: 1;
+  transition: left 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.headerUl.closed {
+  left: -100%;
+  opacity: 0;
+}
+
+.headerLi {
   list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
+  display: block;
+  padding: 35px 10px;
+  font-size: larger;
 }
 
-.headerLi:hover{  
-  background-color: var(--secondary-colour);
-  color: var(--primary-colour);
-  cursor: pointer;
-}
-
-.headerLi a{
+.headerLi a {
   all: unset;
-  font-size: 20px;
 }
 
-.headerIcon{
-  display: none;
-  text-align: right;
-}
-
-.headerIcon:hover{
+.headerLi a:hover {
   cursor: pointer;
-}
-
-.headerIcon img{
-  width: 30px;
-  height: auto;
-}
-
-@media only screen and (max-width: 600px) {
-  .headerNav{
-    grid-template-areas: "navburger"
-    "navlinks"
-  }
-  .headerLi{  
-    display: block;
-  }
-  .headerIcon{
-    display: inline-block;
-    padding: 15px;
-  }
-  .headerUl.closed{
-    display: none;
-  }
+  text-decoration: underline;
 }

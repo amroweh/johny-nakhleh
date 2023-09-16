@@ -1,14 +1,17 @@
-
 @font-face {
-    font-family: covik;
-    src: url(/public/covik_bold.ttf);
+  font-family: covik;
+  src: url(/public/covik_bold.ttf);
 }
-*{
-    font-family: "covik";
-    
+* {
+  font-family: "covik";
 }
-body, html{
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: lightgreen;
+}
+h1,h2,h3,h4,h5,h6{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
