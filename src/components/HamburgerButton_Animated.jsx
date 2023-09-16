@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const HamburgerButton_Animated = ({menuClosed, menuToggleHandler}) => {
   
@@ -12,9 +12,10 @@ const barStyles = {
 }
 const styles = {
     container:{
-        display: "inline-block",
         cursor: "pointer",
-        padding: "5px 10px"
+        padding: "5px 10px",
+        backgroundColor: menuClosed?"transparent":"white",
+        zIndex: 1
     },
     bar:barStyles,
     change_bar1:{
