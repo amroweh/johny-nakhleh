@@ -1,26 +1,35 @@
 import React from 'react'
 import { useState } from 'react'
-import HamburgerButton_Animated from './HamburgerButton_Animated'
-import '../css/header.css'
+import { StyledNavMenuLogoSection, StyledHamburgerBar, StyledHamburgerBarContainer, StyledNavMenuTopSection, StyledNavMenuContentSection_a, StyledNavMenuContentSection_li, StyledNavMenuContentSection, StyledNavMenu } from './styled/Header.styled'
 
-const Header = () => {
+const Header = ({topHeight}) => {
 
     // state to toggle mobile menu expanded or not
     const [closed, setClosed] = useState(true)
     const handleClick = () => setClosed(!closed)
 
     return (
-        <nav className='headerNav'>     
-            <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
-                <HamburgerButton_Animated menuClosed={closed} menuToggleHandler={handleClick}/>
-                <div style={{marginRight: "10px"}}>someLogo</div>
-            </div>       
-            <ul className={closed?'headerUl closed':'headerUl'}>
-                <li className='headerLi'><a href="">Home</a></li>
-                <li className='headerLi'><a href="">About</a></li>
-                <li className='headerLi'><a href="">Contact Me</a></li>
-            </ul>
-        </nav>
+        <StyledNavMenu>
+            <StyledNavMenuTopSection>
+                <StyledHamburgerBarContainer topHeight={topHeight} onClick={handleClick}>
+                    <StyledHamburgerBar topHeight={topHeight} className={closed||"change1"}/>
+                    <StyledHamburgerBar topHeight={topHeight} className={closed||"change2"}/>
+                    <StyledHamburgerBar topHeight={topHeight} className={closed||"change3"}/>
+                </StyledHamburgerBarContainer> 
+                <StyledNavMenuLogoSection>someLogo</StyledNavMenuLogoSection>
+            </StyledNavMenuTopSection>
+            <StyledNavMenuContentSection topHeight={topHeight} className={closed&&'closed'}>
+                <StyledNavMenuContentSection_li>
+                    <StyledNavMenuContentSection_a href="/">Home</StyledNavMenuContentSection_a>
+                </StyledNavMenuContentSection_li>
+                <StyledNavMenuContentSection_li>
+                    <StyledNavMenuContentSection_a href="/about">About</StyledNavMenuContentSection_a>
+                </StyledNavMenuContentSection_li>
+                <StyledNavMenuContentSection_li>
+                    <StyledNavMenuContentSection_a href="/contact">Contact</StyledNavMenuContentSection_a>
+                </StyledNavMenuContentSection_li>
+            </StyledNavMenuContentSection>
+        </StyledNavMenu>            
     )
 }
 
