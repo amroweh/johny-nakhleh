@@ -1,0 +1,8 @@
+.header-main{
+    font-size: clamp(2.75rem, calc(-1.92rem + 7.41vw), 6.75rem);
+    margin-bottom: clamp(2rem, calc(-1.92rem + 5vh), 6.75rem);
+    margin-top: clamp(2rem, calc(-1.92rem + 5vh), 6.75rem);
+    &.centred{
+      text-align: center;
+    }
+}
